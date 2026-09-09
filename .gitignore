@@ -1,0 +1,7 @@
+# IDE FILES
+.idea/**/*
+
+# BUILD ARTEFACTS
+build/**/*
+cc
+compile_commands.json
