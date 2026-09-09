@@ -3,4 +3,4 @@
 
 namespace cc {
   [[nodiscard]] auto is_numeric(std::string_view sv) noexcept -> bool;
-}
+}  // namespace cc
