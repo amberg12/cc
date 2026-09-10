@@ -42,6 +42,8 @@ endif
 SRCS := \
 	src/lexer/lexer.cpp \
 	src/lexer/token.cpp \
+	src/parser/ast.cpp \
+	src/parser/parse.cpp \
 	src/util/string.cpp \
 	src/main.cpp
 OBJS := $(SRCS:%.cpp=$(BUILD_DIR)/%.o)

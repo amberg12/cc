@@ -22,6 +22,8 @@ namespace cc {
 
     /* implicit */ operator Token::TokenType() const;
 
+    [[nodiscard]] auto is_keyword(std::string_view kw) const noexcept -> bool;
+
     TokenType token_type;
     std::string contained_string;
 

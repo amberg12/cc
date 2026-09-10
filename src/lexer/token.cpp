@@ -46,6 +46,10 @@ namespace cc {
     return token_type;
   }
 
+  auto Token::is_keyword(const std::string_view kw) const noexcept -> bool {
+    return token_type == identifier && contained_string == kw;
+  }
+
   Token::Token(TokenType tt) noexcept :
       token_type(tt) {
   }
