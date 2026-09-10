@@ -1,4 +1,5 @@
 #include "lexer/lexer.hpp"
+#include "parser/parse.hpp"
 
 #include <fstream>
 #include <print>
@@ -8,7 +9,6 @@ auto main([[maybe_unused]] int argc, char** argv) -> int {
 
   const auto tokens = cc::lex(std::string {std::istreambuf_iterator<char>(file), std::istreambuf_iterator<char>()});
 
-  for (const auto& token : tokens) {
-    std::println("{}", token);
-  }
+  const auto program = cc::parse_program(tokens);
+  std::println("{}", program);
 }
